@@ -39,7 +39,7 @@ string next_permutation(string str)
 	
 	for (int i = 0; i < n; ++i)
 	{
-		if((ptr[i]==str) and (i<n-1))
+		if((ptr[i]==str) and (i<n-1) and (ptr[i+1]!=str))
 		{
 			return ptr[i+1];
 		}
@@ -52,7 +52,7 @@ string next_permutation(string str)
 			continue;
 		}
 	}
-	return "";
+	return "Already the greatest permutation lexicographically!";
 }
 
 int factorial(int n)
